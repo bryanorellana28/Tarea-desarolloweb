@@ -6,10 +6,35 @@
     <title>Universidad Mariano Gálvez</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            padding-top: 56px; /* Espacio para la barra de navegación fija */
+        }
+        .hero {
+            background: url('img/campus.jpg') no-repeat center center;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+        }
+        .hero h1 {
+            font-size: 3rem;
+        }
+        .hero p {
+            font-size: 1.5rem;
+        }
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+        footer {
+            background-color: #f8f9fa;
+        }
+    </style>
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <a class="navbar-brand" href="#">
             <img src="img/logo.png" width="30" height="30" alt="UMG Logo"> UMG
         </a>
@@ -21,57 +46,118 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Carreras</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Admisiones</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contacto</a>
-                </li>
+               
             </ul>
         </div>
     </nav>
 
-
-    <header class="bg-primary text-white text-center py-5">
+    <header class="hero">
         <div class="container">
             <h1>Bienvenidos a la Universidad Mariano Gálvez</h1>
-            <p class="lead">Educación de calidad al alcance de todos</p>
+            <p>Educación de calidad al alcance de todos</p>
         </div>
     </header>
 
-
     <section class="py-5">
         <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h2>Misión</h2>
-                    <p>Ofrecer una educación superior integral...</p>
+            <div class="row text-center">
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="img/mision.jpg" class="card-img-top" alt="Misión">
+                        <div class="card-body">
+                            <h5 class="card-title">Misión</h5>
+                            <p class="card-text">Ofrecer una educación superior integral con un enfoque en la calidad y la innovación.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-4">
-                    <h2>Visión</h2>
-                    <p>Ser una institución reconocida...</p>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="img/vision.jpg" class="card-img-top" alt="Visión">
+                        <div class="card-body">
+                            <h5 class="card-title">Visión</h5>
+                            <p class="card-text">Ser una institución líder en educación superior, reconocida por su excelencia académica y responsabilidad social.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-4">
-                    <h2>Valores</h2>
-                    <p>Integridad, respeto, responsabilidad...</p>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="img/valores.jpg" class="card-img-top" alt="Valores">
+                        <div class="card-body">
+                            <h5 class="card-title">Valores</h5>
+                            <p class="card-text">Integridad, respeto, responsabilidad y compromiso con la comunidad.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <section class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Testimonios</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="img/testimonio1.jpg" class="card-img-top" alt="Testimonio 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Juan Pérez</h5>
+                            <p class="card-text">"La Universidad Mariano Gálvez ha sido fundamental en mi desarrollo profesional. Los profesores son excelentes y el ambiente es muy acogedor."</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="img/testimonio2.jpg" class="card-img-top" alt="Testimonio 2">
+                        <div class="card-body">
+                            <h5 class="card-title">María López</h5>
+                            <p class="card-text">"Una institución que ofrece calidad académica y un enfoque práctico en todas las áreas de estudio. Estoy muy satisfecha con mi experiencia."</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="img/testimonio3.jpg" class="card-img-top" alt="Testimonio 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Carlos Hernández</h5>
+                            <p class="card-text">"UMG me ha brindado las herramientas necesarias para crecer en mi carrera. La formación integral y el apoyo continuo son invaluables."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Contáctanos</h2>
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" placeholder="Tu nombre">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" class="form-control" id="email" placeholder="Tu correo">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea class="form-control" id="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
+    </section>
 
     <footer class="bg-light text-center py-4">
         <p>&copy; 2024 Universidad Mariano Gálvez. Todos los derechos reservados.</p>
+      
     </footer>
-
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
     <script src="js/scripts.js"></script>
 </body>
 </html>
